@@ -23,4 +23,4 @@ jobs:
       - name: validating syntax
         run: terraform validate
       - name: applying changes
-        run: terraform destroy --auto-approve
+        run: terraform apply --auto-approve
