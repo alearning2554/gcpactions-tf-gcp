@@ -20,5 +20,9 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v1'
       - name: 'Use gcloud CLI'
         run: 'gcloud info'
-      - name: terraform version
-        run: terraform -version
+      - name: initilization
+        run: terraform init
+      - name: validating syntax
+        run: terraform validate
+      - name: applying changes
+        run: terraform apply --auto-approve
